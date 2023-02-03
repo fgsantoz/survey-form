@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      Please fill out this form with the required information
+    </p>
+    <form id="survey-form" method="post" action="">
+      <fieldset>
+        <label id="name-label" for="name">
+          name:
+          <input
+            id="name"
+            name="first-name"
+            type="text"
+            required
+            placeholder="Enter Your First Name"
+          />
+        </label>
+        <label id="email-label" for="email">
+          email:
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="Enter Your Email:"
+          />
+        </label>
+        <label id="passWord-label" for="new-password">
+          password:
+          <input
+            id="new-password"
+            name="new-password"
+            type="password"
+            pattern="[a-z0-5]{8,}"
+            required
+            placeholder="Create a New Password:"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="personal-account"
+          ><input
+            id="personal-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+            value="radioA"
+          />
+          Personal Account
+        </label>
+        <label for="business-account"
+          ><input
+            id="business-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+            value="radioB"
+          />
+          Business Account
+        </label>
+        <label for="terms-and-conditions">
+          <input
+            id="terms-and-conditions"
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            class="inline"
+            value="checkBoxA"
+          />
+          I accept the
+          <a href="https://www.freecodecamp.org/news/terms-of-service/"
+            >terms and conditions
+          </a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">
+          Upload a profile picture:
+          <input id="profile-picture" type="file" name="file" />
+        </label>
+        <label id="number-label" for="number">
+          age (years):
+          <input
+            id="number"
+            type="number"
+            name="age"
+            min="13"
+            max="120"
+            placeholder="Enter your age:"
+          />
+        </label>
+        <label for="dropdown">
+          How did you hear about us?
+          <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+
+        <label for="front-end">
+          <input
+            id="front-end"
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            class="inline"
+            value="opA"
+          />
+        </label>
+
+        <label for="back-end">
+          <input
+            id="back-end"
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            class="inline"
+            value="opB"
+          />
+        </label>
+
+        <label for="full-stack">
+          <input
+            id="full-stack"
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            class="inline"
+            value="opC"
+          />
+        </label>
+
+        <label for="bio">
+          Provide a bio:
+          <textarea
+            id="bio"
+            name="bio"
+            rows="3"
+            cols="30"
+            placeholder="I like coding on the beach..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
