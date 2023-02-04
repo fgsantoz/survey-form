@@ -52,6 +52,11 @@ textarea {
   color: #ffffff;
 }
 
+#bio {
+  width: 100%;
+  height: 100px;
+}
+
 .inline {
   width: unset;
   margin: 0 0.5em 0 0;
